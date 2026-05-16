@@ -1,0 +1,12 @@
+# Doc_ID: asthma_management
+# Title: Asthma control and inhaler-based therapy
+# Journal: Demo Respiratory Review
+# Year: 2022
+# Source: Curated sample text
+
+Asthma is a chronic inflammatory airway disease characterized by variable symptoms such as wheeze, cough, chest tightness, and shortness of breath. Good asthma care requires symptom assessment, trigger reduction, and appropriate inhaler therapy.
+
+Inhaled corticosteroids reduce airway inflammation and are central to long-term asthma control for many patients. Reliever medication can help with acute symptoms, but frequent reliever use may indicate poor control and should prompt clinical review.
+
+Patient education matters because inhaler technique, adherence, environmental triggers, and action plans all influence outcomes. Severe symptoms, blue lips, or difficulty speaking require urgent medical attention.
+

@@ -1,0 +1,12 @@
+# Doc_ID: hypertension_guidelines
+# Title: Blood pressure management in adults
+# Journal: Demo Guideline Notes
+# Year: 2023
+# Source: Curated sample text
+
+Hypertension management begins with accurate blood pressure measurement and cardiovascular risk assessment. Lifestyle measures include reducing sodium intake, increasing physical activity, moderating alcohol consumption, improving sleep, and weight management.
+
+Drug therapy is commonly used when blood pressure remains elevated despite lifestyle changes or when cardiovascular risk is high. Treatment choice depends on age, kidney function, diabetes status, pregnancy status, and other comorbidities.
+
+Follow-up is important because blood pressure treatment can require dose adjustment and monitoring for adverse effects. Patients should not start or stop antihypertensive medication without clinical supervision.
+

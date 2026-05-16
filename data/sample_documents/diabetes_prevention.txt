@@ -1,0 +1,12 @@
+# Doc_ID: diabetes_prevention
+# Title: Lifestyle prevention of type 2 diabetes
+# Journal: Demo Clinical Review
+# Year: 2021
+# Source: Curated sample text
+
+Type 2 diabetes risk is strongly associated with excess weight, sedentary behavior, and impaired glucose regulation. Lifestyle interventions that combine weight loss, increased physical activity, and dietary changes can delay or prevent the onset of type 2 diabetes in high-risk adults.
+
+Structured prevention programs often recommend at least 150 minutes per week of moderate physical activity, reduced intake of refined carbohydrates, increased fiber intake, and sustained weight management. Evidence is strongest for people with prediabetes or obesity, while individual treatment decisions should consider comorbidities and patient preferences.
+
+Medication may be considered for selected high-risk patients, but lifestyle modification remains the foundation of diabetes prevention. Any medication decision should be made with a qualified clinician.
+
