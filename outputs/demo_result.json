@@ -1,0 +1,272 @@
+{
+  "query": "What lifestyle changes help prevent type 2 diabetes?",
+  "answer": "## Answer\nFor the question 'What lifestyle changes help prevent type 2 diabetes', the retrieved evidence suggests the answer should be limited to the cited findings below.\n\n## Evidence\n- Lifestyle interventions that combine weight loss, increased physical activity, and dietary changes can delay or prevent the onset of type 2 diabetes in high-risk adults. [diabetes_prevention::c0]\n- Medication may be considered for selected high-risk patients, but lifestyle modification remains the foundation of diabetes prevention. [diabetes_prevention::c1]\n\n## Limitations and Safety\nThe answer is grounded only in the retrieved sample documents. It is a technical RAG demo, not medical advice.",
+  "sources": [
+    {
+      "chunk_id": "diabetes_prevention::c0",
+      "doc_id": "diabetes_prevention",
+      "title": "Lifestyle prevention of type 2 diabetes",
+      "journal": "Demo Clinical Review",
+      "year": 2021,
+      "score": 0.85
+    },
+    {
+      "chunk_id": "diabetes_prevention::c1",
+      "doc_id": "diabetes_prevention",
+      "title": "Lifestyle prevention of type 2 diabetes",
+      "journal": "Demo Clinical Review",
+      "year": 2021,
+      "score": 0.7075
+    },
+    {
+      "chunk_id": "hypertension_guidelines::c0",
+      "doc_id": "hypertension_guidelines",
+      "title": "Blood pressure management in adults",
+      "journal": "Demo Guideline Notes",
+      "year": 2023,
+      "score": 0.6774
+    },
+    {
+      "chunk_id": "asthma_management::c0",
+      "doc_id": "asthma_management",
+      "title": "Asthma control and inhaler-based therapy",
+      "journal": "Demo Respiratory Review",
+      "year": 2022,
+      "score": 0.5955
+    }
+  ],
+  "retrieval_debug": [
+    {
+      "chunk_id": "diabetes_prevention::c0",
+      "score": 0.85,
+      "score_vector": 0.3164,
+      "score_bm25": 6.7041,
+      "debug": {
+        "channels": [
+          {
+            "name": "vector",
+            "rank": 1,
+            "raw_score": 0.3163514522982156
+          },
+          {
+            "name": "bm25",
+            "rank": 1,
+            "raw_score": 6.704119817239466
+          }
+        ],
+        "reranker": {
+          "normalized_retrieval_score": 1.0,
+          "query_term_coverage": 0.75,
+          "title_term_coverage": 0.5,
+          "recency_score": 0.75
+        }
+      }
+    },
+    {
+      "chunk_id": "diabetes_prevention::c1",
+      "score": 0.7075,
+      "score_vector": 0.069,
+      "score_bm25": 1.2776,
+      "debug": {
+        "channels": [
+          {
+            "name": "vector",
+            "rank": 3,
+            "raw_score": 0.06897235034754272
+          },
+          {
+            "name": "bm25",
+            "rank": 3,
+            "raw_score": 1.277593253011539
+          }
+        ],
+        "reranker": {
+          "normalized_retrieval_score": 0.9683,
+          "query_term_coverage": 0.25,
+          "title_term_coverage": 0.5,
+          "recency_score": 0.75
+        }
+      }
+    },
+    {
+      "chunk_id": "hypertension_guidelines::c0",
+      "score": 0.6774,
+      "score_vector": 0.0854,
+      "score_bm25": 1.9343,
+      "debug": {
+        "channels": [
+          {
+            "name": "vector",
+            "rank": 2,
+            "raw_score": 0.08544929648515444
+          },
+          {
+            "name": "bm25",
+            "rank": 2,
+            "raw_score": 1.9342751944542784
+          }
+        ],
+        "reranker": {
+          "normalized_retrieval_score": 0.9839,
+          "query_term_coverage": 0.375,
+          "title_term_coverage": 0.0,
+          "recency_score": 0.85
+        }
+      }
+    },
+    {
+      "chunk_id": "asthma_management::c0",
+      "score": 0.5955,
+      "score_vector": 0.0443,
+      "score_bm25": 1.2045,
+      "debug": {
+        "channels": [
+          {
+            "name": "vector",
+            "rank": 4,
+            "raw_score": 0.04431282108812983
+          },
+          {
+            "name": "bm25",
+            "rank": 4,
+            "raw_score": 1.2045409299920153
+          }
+        ],
+        "reranker": {
+          "normalized_retrieval_score": 0.9531,
+          "query_term_coverage": 0.125,
+          "title_term_coverage": 0.0,
+          "recency_score": 0.8
+        }
+      }
+    }
+  ],
+  "evaluation": {
+    "generation": {
+      "citation_coverage": {
+        "citations_found": [
+          "diabetes_prevention::c0",
+          "diabetes_prevention::c1"
+        ],
+        "supported_citations": [
+          "diabetes_prevention::c0",
+          "diabetes_prevention::c1"
+        ],
+        "unsupported_citations": [],
+        "coverage": 1.0,
+        "passed": true
+      },
+      "structure": {
+        "required_sections": {
+          "Answer": true,
+          "Evidence": true,
+          "Limitations": true
+        },
+        "passed": true,
+        "answer_chars": 684,
+        "answer_sentences": 5
+      },
+      "source_diversity": {
+        "num_selected_chunks": 4,
+        "unique_docs": 3,
+        "doc_distribution": {
+          "diabetes_prevention": 2,
+          "hypertension_guidelines": 1,
+          "asthma_management": 1
+        },
+        "journal_distribution": {
+          "Demo Clinical Review": 2,
+          "Demo Guideline Notes": 1,
+          "Demo Respiratory Review": 1
+        },
+        "year_distribution": {
+          "2021": 2,
+          "2023": 1,
+          "2022": 1
+        }
+      }
+    },
+    "retrieval_proxy": {
+      "sample_k": 5,
+      "top_k": 3,
+      "pass_at_1": 1.0,
+      "pass_at_3": 1.0,
+      "mrr": 1.0,
+      "cases": [
+        {
+          "query_from_chunk": "asthma_management::c0",
+          "top_ids": [
+            "asthma_management::c0",
+            "diabetes_prevention::c0",
+            "diabetes_prevention::c1"
+          ],
+          "self_rank": 1,
+          "pass_at_1": true,
+          "pass_at_3": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "query_from_chunk": "asthma_management::c1",
+          "top_ids": [
+            "asthma_management::c1",
+            "asthma_management::c0",
+            "hypertension_guidelines::c0"
+          ],
+          "self_rank": 1,
+          "pass_at_1": true,
+          "pass_at_3": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "query_from_chunk": "diabetes_prevention::c0",
+          "top_ids": [
+            "diabetes_prevention::c0",
+            "hypertension_guidelines::c0",
+            "diabetes_prevention::c1"
+          ],
+          "self_rank": 1,
+          "pass_at_1": true,
+          "pass_at_3": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "query_from_chunk": "diabetes_prevention::c1",
+          "top_ids": [
+            "diabetes_prevention::c1",
+            "diabetes_prevention::c0",
+            "hypertension_guidelines::c0"
+          ],
+          "self_rank": 1,
+          "pass_at_1": true,
+          "pass_at_3": true,
+          "reciprocal_rank": 1.0
+        },
+        {
+          "query_from_chunk": "hypertension_guidelines::c0",
+          "top_ids": [
+            "hypertension_guidelines::c0",
+            "diabetes_prevention::c0",
+            "asthma_management::c0"
+          ],
+          "self_rank": 1,
+          "pass_at_1": true,
+          "pass_at_3": true,
+          "reciprocal_rank": 1.0
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "num_documents": 3,
+    "num_chunks": 5,
+    "top_k": 4,
+    "timings_seconds": {
+      "retrieval": 0.0001,
+      "reranking": 0.0001,
+      "generation": 0.0001,
+      "evaluation": 0.0005,
+      "total": 0.0009
+    },
+    "answer_chars": 684
+  }
+}
