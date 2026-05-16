@@ -31,8 +31,8 @@ flowchart LR
     Reranker --> Context["Selected evidence chunks"]
     Context --> Generator["Grounded answer generator"]
     Generator --> Answer["Answer with citations"]
-    Context --> Eval["Evaluation"]
-    Answer --> Eval
+    Context --> Eval1["Retrieval evaluation"]
+    Answer --> Eval2["Answer evaluation"]
 ```
 
 ## Repository Map
