@@ -144,8 +144,7 @@ These metrics do not replace human evaluation, but they give a practical regress
 - Replace in-memory retrieval with Chroma or another vector store.
 - Replace TF-IDF vectors with BGE or domain-specific biomedical embeddings.
 - Replace heuristic reranking with `BAAI/bge-reranker-base` or another cross-encoder.
-- Add structured LLM judge or RAGAS-style metrics when a stronger evaluator is available.
-- Add manually labeled query-document pairs for Recall@k, MRR, and NDCG.
+- Add manually labeled query-document pairs for Recall@k, MRR, and etc.
 
 ## Medical Safety Note
 
